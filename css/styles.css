@@ -1,0 +1,308 @@
+@font-face {
+    font-family: "PixelifySans";
+    src: url("fonts/PixelifySans-Bold.ttf") format("truetype"), url("fonts/PixelifySans-Medium.ttf") format("truetype"), url("fonts/PixelifySans-Regular.ttf") format("truetype"), url("fonts/PixelifySans-SemiBold.ttf") format("truetype"), url("fonts/PixelifySans-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+    font-family: "PixelifySans", sans-serif;
+    background-image: url(../assets/forest-8227410_1280.webp);
+    background-size: cover;
+}
+
+#seleccionar-mascota {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    color: #F6F5F5;
+    padding: 10px;
+    margin: 20px;
+    background-color: #4A249D;
+    border: 4px solid #F9E2AF;
+    border-radius: 10px;
+    border-style: outset;
+    font-weight: normal;
+    font-size: 60px;
+}
+
+.container__mokepon__selector {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#seleccionar-mokepon {
+    min-width: 208px;
+    padding: 5px;
+    margin: 5px;
+    border: 3px solid black;
+    border-radius: 10px;
+    border-style: outset;
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+.subtitulo {
+    display: flex;
+    margin: 10px;
+    font-size: 24px;
+    color: white;
+}
+
+.tarjetas {
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tarjeta-de-mokepon {
+    width: 130px;
+    background-color: #c8c8ff;
+    padding: 10px;
+    box-sizing: content-box;
+    border: 2px solid #fff371;
+    border-radius: 10px;
+    border-style: outset;
+    font-weight: lighter;
+    font-size: medium; 
+    text-align: center;
+} 
+
+#boton-mascota {
+    display: grid;
+    margin: 0.5em auto;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    border-style: outset;
+    background-color: #c8c8ff33;
+    font-family: "PixelifySans", sans-serif;
+    font-weight: lighter;
+}
+
+#imagen-seleccionada {
+    display: none;
+    border: 3px solid black;
+    border-radius: 10px;
+    border-style: outset;
+    margin-block: 20px;
+    background-color: rgba(0, 0, 0, 0.63);
+
+}
+
+#imagen-seleccionada img {
+    width: 12rem;
+    justify-content: center;
+    align-items: center;
+}
+
+label > span {
+    color: #4d4d4d;
+}
+
+label > input[type="radio"] {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+label > input[type="radio"]:checked + span {
+    color: black;
+}
+
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+}
+
+#elegir-ataque {
+    margin: 5px;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: outset;
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+#elegir-ataque > h2 {
+    margin: 5px;
+    text-align: center;
+}
+
+.boton-de-ataque {
+    color: white;
+    background-color: #c8c8ff33;
+    border: 2px solid white;
+    border-radius: 10px;
+    border-style: outset;
+    font-family: "PixelifySans", sans-serif;
+    font-weight: lighter;
+    font-size: medium;
+}
+
+#botones-ataques {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+#mensajes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    background: #ECCEAE;
+    margin: 5px;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: outset;
+    background-color: rgba(0, 0, 0, 0.63);
+    color: white;
+}
+
+#boton-reiniciar {
+    color: white;
+    background-color: #c8c8ff33;
+    border: 2px solid white;
+    border-radius: 10px;
+    border-style: outset;
+    background-color: #c8c8ff33;
+    font-family: "PixelifySans", sans-serif;
+    font-weight: lighter;
+    font-size: medium;
+}
+
+.info-partida {
+    display: grid;
+    grid-template-columns: 6em 6em;
+    margin: 5px;
+    text-align: center;
+    gap: 5px;
+}
+
+#info-jugador {
+    border: 3px solid black;
+    border-radius: 10px;
+    border-style: outset;
+    background-color: rgba(0, 0, 0, 0.63);
+    color: white;
+}
+
+#info-oponente {
+    border: 3px solid black;
+    border-radius: 10px;
+    border-style: outset;
+    background-color: rgba(0, 0, 0, 0.63);
+    color: white;
+}
+
+@media (width <= 226px) {
+    #botones-ataques {
+        flex-direction: column;
+    }
+
+    .boton-de-ataque {
+        width: 6em;
+        margin: 0 auto;
+    }
+}
+
+@media (width <= 479px) {
+    .titulo {
+        font-size: 40px;
+    }
+
+    .container__mokepon__selector {
+        display: grid;
+        gap: 0;
+    }
+
+    .subtitulo {
+        font-size: 20px;
+    }
+
+    #imagen-seleccionada {
+        transform: scale(0.8);
+        width: min-content;
+        margin: auto;
+    }
+
+}
+
+@media (480px <= width <= 767px) {
+    .titulo {
+        font-size: 40px;
+        margin: 10px;
+    }
+
+    .container__mokepon__selector {
+        display: grid;
+        grid-template: 1fr / 3fr 1fr;
+        width: min-content;
+    }
+    
+    #seleccionar-mokepon {
+        width: min-content;
+    }
+
+    .subtitulo {
+        display: grid;
+        font-size: 20px;
+        text-align: center;
+        margin: 7px;
+    }
+    
+    .tarjetas {
+        grid-template: repeat(3, 1fr) / repeat(2, 10em);
+        width: min-content;
+        margin: 0 1em 0 1em;
+    }
+
+}
+
+@media (768px <= width <= 959px) {
+    .tarjetas {
+        grid-template: 1fr 1fr / 1fr 1fr 1fr;
+        margin: 5px 20px;
+    }
+}
+
+@media (960px <= width <= 1219px) {
+    .tarjetas {
+        grid-template: 1fr 1fr / 1fr 1fr 1fr;
+        margin: 5px 20px;
+    }
+}
+
+@media (width >= 1219px) {
+    .tarjetas {
+        grid-template: 1fr 1fr / 1fr 1fr 1fr;
+        margin: 5px 20px;
+    }
+
+    .titulo {
+        font-size: 70px;
+    }
+
+    .subtitulo {
+        font-size: 35px;
+    }
+
+    .tarjeta-de-mokepon {
+        font-size: 22px;
+        width: 7em;
+    }
+
+    #boton-mascota {
+        font-size: 22px;
+    }
+}
